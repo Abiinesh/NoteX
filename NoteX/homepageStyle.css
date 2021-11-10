@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(bg.jpg);
+    background-color: lightyellow;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    padding-bottom: 5%;
+
+}
+
+.x_color{
+  color: #a29bfe;
+
+}
+
+h2{
+  color: #fff;
+  font-size: 60px;
+  position: absolute;
+  top: -1%;
+  left: 5%;
+
+}
+
+.main_title h1{
+  font-size: 40px;
+  text-align: center;
+  margin: 60px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  display: none;
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255, 0.5);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.logout_btn a {
+
+    width: 150px;
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    border-radius: 30px;
+    background-color: #a29bfe;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.logout_btn a:hover {
+    background: #6c5ce7;
+}
+
+.logout_btn a span:before{
+
+    content:'Logout';
+}
+
+.grid_container {
+
+  top: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  gap: 5px;
+  padding: 10px;
+  margin: 20px;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.grid_item1 {
+
+  padding: 20px;
+  margin-top: 5px;
+  margin: auto;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  border-radius: 5px;
+}
+
+.grid_item2 {
+
+  max-height: 80vh;
+  overflow-y: scroll;
+  padding: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin: auto;
+  background-color: rgba(0,0,0,.2);
+  border: 0px solid;
+  box-shadow: inset 0px 3px 3px 0px rgba(0,0,0,.1);
+  border-radius: 10px;
+  grid-column-start: 2;
+  grid-column-end: span 3;
+}
+
+@media only screen and (max-width: 800px){
+
+  .logout_btn a {
+
+      width: 60px;
+
+  }
+
+  .logout_btn a span:before{
+
+      content:'-';
+  }
+
+  .main_title h1{
+    font-size: 40px;
+    text-align: center;
+    margin: 60px;
+    visibility: hidden;
+  }
+  .grid_container {
+
+    position: absolute;
+    top: 25%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    padding: 10px;
+
+  }
+
+  .grid_item1 {
+    padding: 20px;
+    margin: auto;
+    grid-column-start:1;
+    grid-column-end:1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  .grid_item2 {
+
+    max-height: 100vh;
+    padding: 20px;
+    margin: auto;
+    grid-column-start:1;
+    grid-column-end:1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
+  .container {
+
+        width: auto;
+        height: auto;
+        padding: 30px 30px;
+  }
+
+
+}
+
+
+
+.container {
+
+    width: auto;
+    height: auto;
+    padding: 30px 30px;
+}
+
+.container2 {
+
+    min-height: 400px;
+}
+
+
+.new-note{
+
+    width: 300px;
+    margin: 0 auto;
+}
+
+.new-note input,
+.new-note textarea,
+.new-note button{
+    font-family: Arial;
+    padding: 5px 10px;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.note {
+    background-color: #a29bfe;
+    color: black;
+    width: 270px;
+    min-width: 270px;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    min-height: 100px;
+}
+.note .title{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.note .title a {
+    color: black;
+    text-decoration: none;
+}
+.note .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border: none;
+}
+.note small {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin-top: 10px;
+    display: block;
+    text-align: right;
+    font-style: italic;
+    color: #3d3d3d;
+    font-size: 10px;
+}
+
+.container h1{
+  color: black;
+  text-align: center;
+}
+
+.container input, textarea {
+
+  border: 2px solid #e7e7e7;
+  font-size: 1rem;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+}
+
+.container textarea {
+
+  min-height: 170px;
+  resize: none;
+}
+
+.new_btn button{
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    background: #a29bfe;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.new_btn button:hover {
+
+    background: #6c5ce7;
+}
